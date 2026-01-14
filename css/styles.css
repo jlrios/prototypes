@@ -1,0 +1,73 @@
+.toolbar { 
+    display:flex; 
+    gap:8px; 
+    margin-bottom:10px;
+}
+
+.toolbar button { 
+    padding:8px 12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    background:#fff;
+    cursor:pointer; 
+}
+
+.toolbar button.active { 
+    border-color:#000;
+    font-weight:600; 
+}
+
+.mapWrap {
+    position: relative;
+    width: 100%;
+}
+
+.floor { 
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 250ms ease;
+    width: 1280px; 
+    height: 720px;
+}
+
+.floor.active { 
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.mapWrap::before {
+    content: "";
+    display: block;
+    padding-top: 75%;
+}
+
+svg .classroom {
+    cursor: pointer;
+}
+
+/* smooth transition */
+svg .classroom rect,
+svg .classroom path {
+    transition: fill 120ms ease;
+}
+
+/* hover (only if NOT selected) */
+svg .classroom:hover:not(.selected) rect,
+svg .classroom:hover:not(.selected) path {
+    fill: #ffd54f !important;
+}
+
+/* selected */
+svg .classroom.selected rect,
+svg .classroom.selected path {
+    fill: #ff8a65 !important;
+}
+
+.floor svg { 
+    position: absolute;
+    inset: 0;
+    width: 100%; 
+    height: 100%;
+}
