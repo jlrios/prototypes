@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/styles.css">
+  <script src="./js/buildingH.js" defer></script>
+  <title>Plantel 20 - Campus Interactivo</title>
+</head>
+<body>
+  <div class="toolbar">
+    <button id="btnHF1">Planta baja</button>
+    <button id="btnHF2">Planta alta </button>
+  </div>
+  <div class="mapWrap">
+    <div id="buildingHF1" class="floor active">
+      <!--<object 
+        id="svgBHF1" 
+        data="./assets/maps/sectorH/buildingHF1.svg" 
+        type="image/svg+xml" 
+        style="width: 1280px; height: 720px;">
+      </object>-->
+      
+
+    </div>
+    <div id="buildingHF2" class="floor">
+      <!--<object 
+        id="svgBHF2" 
+        data="./assets/maps/sectorH/buildingHF2.svg" 
+        type="image/svg+xml" 
+        style="width: 1280px; height: 720px;">
+      </object>-->
+    </div>  
+  </div>
+</body>
+<script>
+  fetch("./assets/maps/sectorH/BuildingHF1.svg")
+    .then(res => res.text())
+    .then(svgText => {
+    document.getElementById("buildingHF1").innerHTML = svgText;
+  });
+   fetch("./assets/maps/sectorH/BuildingHF2.svg")
+    .then(res => res.text())
+    .then(svgText => {
+    document.getElementById("buildingHF2").innerHTML = svgText;
+  });
+</script>
+</html>
