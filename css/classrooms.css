@@ -1,0 +1,15 @@
+/* Cursor y transición en las aulas */
+.mapWrap svg .classroom rect {
+  cursor: pointer;
+  transition: fill 120ms ease;
+}
+
+/* Hover (solo si no está seleccionada) */
+.mapWrap svg .classroom:hover:not(.selected) rect {
+  fill: #ffd54f !important;
+}
+
+/* Seleccionada */
+.mapWrap svg .classroom.selected rect {
+  fill: #ff8a65 !important;
+}
