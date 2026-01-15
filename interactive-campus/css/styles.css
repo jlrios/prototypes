@@ -1,73 +1,61 @@
+:root{
+  --bg-color:rgb(213, 253, 206);
+  --first-color: #212529;
+  --second-color: #4d4d4d;
+}
+
+/* General */
+body {
+  background: var(--bg-color);
+  color: var(--first-color);
+  margin: 0;
+  width: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
 .toolbar { 
-    display:flex; 
-    gap:8px; 
-    margin-bottom:10px;
+  display:flex; 
+  gap:8px; 
+  margin: 10px 0 10px 10px;
 }
 
 .toolbar button { 
-    padding:8px 12px;
-    border:1px solid #ccc;
-    border-radius:8px;
-    background:#fff;
-    cursor:pointer; 
+  background-color: transparent;
+  padding:8px 12px;
+  border:1px solid #000;
+  border-radius:6px;
+  cursor:pointer; 
 }
 
 .toolbar button.active { 
-    border-color:#000;
-    font-weight:600; 
+  font-weight:600; 
 }
 
 .mapWrap {
-    position: relative;
-    width: 100%;
+  margin-left: 10px;
+  position: relative;
 }
 
 .floor { 
-    position: absolute;
-    inset: 0;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 250ms ease;
-    width: 1280px; 
-    height: 720px;
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 250ms ease;
 }
 
 .floor.active { 
-    opacity: 1;
-    pointer-events: auto;
-}
-
-.mapWrap::before {
-    content: "";
-    display: block;
-    padding-top: 75%;
-}
-
-svg .classroom {
-    cursor: pointer;
-}
-
-/* smooth transition */
-svg .classroom rect,
-svg .classroom path {
-    transition: fill 120ms ease;
-}
-
-/* hover (only if NOT selected) */
-svg .classroom:hover:not(.selected) rect,
-svg .classroom:hover:not(.selected) path {
-    fill: #ffd54f !important;
-}
-
-/* selected */
-svg .classroom.selected rect,
-svg .classroom.selected path {
-    fill: #ff8a65 !important;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .floor svg { 
-    position: absolute;
-    inset: 0;
-    width: 100%; 
-    height: 100%;
+  position: absolute;
+  inset: 0;
+  width: 1280px;
+  height: 720px;
+}
+
+svg .classroom {
+    background-color: yellowgreen;
 }

@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/styles.css">
-  <script src="./js/buildingH.js" defer></script>
+  <link rel="stylesheet" href="./css/classrooms.css">
+  <script defer src="./js/buildingH.js"></script>
   <title>Plantel 20 - Campus Interactivo</title>
 </head>
 <body>
@@ -13,36 +14,8 @@
     <button id="btnHF2">Planta alta </button>
   </div>
   <div class="mapWrap">
-    <div id="buildingHF1" class="floor active">
-      <!--<object 
-        id="svgBHF1" 
-        data="./assets/maps/sectorH/buildingHF1.svg" 
-        type="image/svg+xml" 
-        style="width: 1280px; height: 720px;">
-      </object>-->
-      
-
-    </div>
-    <div id="buildingHF2" class="floor">
-      <!--<object 
-        id="svgBHF2" 
-        data="./assets/maps/sectorH/buildingHF2.svg" 
-        type="image/svg+xml" 
-        style="width: 1280px; height: 720px;">
-      </object>-->
-    </div>  
+    <div id="buildingHF1" class="floor active"></div>
+    <div id="buildingHF2" class="floor"></div>  
   </div>
 </body>
-<script>
-  fetch("./assets/maps/sectorH/BuildingHF1.svg")
-    .then(res => res.text())
-    .then(svgText => {
-    document.getElementById("buildingHF1").innerHTML = svgText;
-  });
-   fetch("./assets/maps/sectorH/BuildingHF2.svg")
-    .then(res => res.text())
-    .then(svgText => {
-    document.getElementById("buildingHF2").innerHTML = svgText;
-  });
-</script>
 </html>
