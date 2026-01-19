@@ -1,0 +1,138 @@
+:root {
+  --bg-color: #a9e89b;
+  --accent: #00ff7f;
+  --tab-active-text: var(--accent);
+  --tab-bg: #ffffff;
+  --tab-active: #132720;
+  --tab-hover: #13272020;
+  --text: #132720;
+  --text-hover: #132720
+}
+
+.dark {
+  --tab-active-text: #303030;
+  --tab-bg: #303030;
+  --tab-active: var(--accent);
+  --tab-hover: #00ff7f;
+  --text: #ffffff;
+  --text-hover: var(--accent);
+}
+
+main {
+  background-color: var(--bg-color);
+}
+
+.dark main {
+  background-color: #070707;
+}
+
+aside {
+  padding: .5rem;
+  display: grid;
+  grid-template-rows: 1fr 9rem;
+  gap: 1rem;
+  min-height: 90vh;
+}
+
+aside nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+aside .logo {
+  background-color: var(--tab-bg);
+  border-radius: 1.5rem;
+  label {
+    font-size: 1.25rem !important;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+}
+
+aside ul {
+  list-style: none;
+  width: 4.5rem;
+  background-color: var(--tab-bg);
+  padding: .5rem;
+  border-radius: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  position: relative;
+  isolation: isolate;
+  &.main::before {
+    content: "";
+    position: absolute;
+    inset-inline: 0.5rem;
+    height: 3.5rem;
+    top: calc(0.5rem + (var(--i, 0) * 4rem));
+    background-color: var(--tab-active);
+    border-radius: 1rem;
+    z-index: -1;
+    transition: all 0.35s ease-in-out;
+  }
+}
+
+aside li {
+  height: 3.5rem;
+  display: grid;
+  place-items: center;
+  font-size: 1.5rem;
+  position: relative;
+  cursor: pointer;
+  color: var(--text);
+  border-radius: 1rem;
+  &.active {
+    color: var(--tab-active-text);
+  }
+  &:not(.active, :hover) i {
+    opacity: 0.5;
+  }
+  &:hover:not(.active) {
+    background-color: var(--tab-hover);
+  }
+  & label {
+    color: var(--text);
+    border-radius: 0.5rem;
+    transition: inherit;
+    font-size: 1rem;
+  }
+  &.active label {
+    color: var(--tab-active-text);
+  }
+}
+
+aside:not(.expand) {
+  label {
+    position: absolute;
+    overflow: hidden;
+    z-index: 1;
+    background-color: var(--tab-bg);
+    transform-origin: left;
+    left: calc(100% + 1rem);
+    padding: .5rem 1rem;
+    width: max-content;
+    transition: inherit;
+    display: none;
+  }
+  .active label {
+    background-color: var(--tab-active);  
+  }
+  li:hover label {
+    display: flex;
+  }
+}
+
+aside.expand ul {
+  width: 14rem;
+  overflow: hidden;
+  li {
+    display: grid;
+    grid-template-columns: 3.5rem 1rem;
+    label {
+      position: static;
+      width: 100%;
+    }
+  }
+}

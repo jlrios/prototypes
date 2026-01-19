@@ -3,16 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/styles.css">
-  <link rel="stylesheet" href="./css/main.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-  <script defer src="./js/main.js"></script>
-
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/floor.css">
+  <link rel="stylesheet" href="./css/search-box.css">
+  <script src="./js/main.js" defer></script>
+  <script src="./js/buildingH.js" defer></script>
   <title>Plantel 20 - Campus Interactivo</title>
 </head>
 <body>
-  <main>
-    <aside>
+  <div class="app">
+    <aside class="sidebar">
       <nav>
         <ul class="logo">
           <li>
@@ -60,14 +62,35 @@
         </ul>
       </div>
     </aside>
-  </main>
-  <div class="mapWrap">
-    <div id="buildingHF1" class="floor active"></div>
-    <div id="buildingHF2" class="floor"></div>  
-  </div>
-  <div class="toolbar">
-    <button id="btnHF1">Planta baja</button>
-    <button id="btnHF2">Planta alta </button>
-  </div>
+    <!-- Main always full width -->
+    <main class="map">
+      <header class="topbar">
+        <div class="input-search">
+          <input 
+            type="text" 
+            placeholder="Buscar aula, docente, alumno..."
+            spellcheck="false"
+            autocomplete="off"
+          >
+          <button">
+            <i class="fa-solid fa-magnifying-glass fa-2x"></i>
+          </button>
+        </div>
+      </header>
+      <section class="stage">
+        <div class="wrap" style="background-color: yellow;">
+          <div id="buildingHF1" class="floor active" style="background-color: green;"></div>
+          <div id="buildingHF2" class="floor"></div>
+        </div>
+      </section>
+      <div style="background-color: red; position: absolute; bottom: 0; left: 0; width: 100%;">
+        Tool bar
+      </div>
+
+     
+</main>
+
+  </div> 
+
 </body>
 </html>

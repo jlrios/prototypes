@@ -28,36 +28,8 @@ async function loadSvgInto(el, url) {
 btnHF1.addEventListener("click", () => showFloor(1));
 btnHF2.addEventListener("click", () => showFloor(2));
 
-/*document.querySelector(".mapWrap").addEventListener("click", (e) => {
+document.querySelector(".wrap").addEventListener("click", (e) => {
   const classroom = e.target.closest(".classroom");
   if (!classroom) return;
-  console.log("clicked:", classroom.dataset.index);
-});*/
-
-const mapWrap = document.querySelector(".mapWrap");
-let selectedClassroom = null;
-
-mapWrap.addEventListener("click", (e) => {
-  const classroom = e.target.closest(".classroom");
-
-  // click fuera: limpiar selección
-  if (!classroom) {
-    if (selectedClassroom) {
-      selectedClassroom.classList.remove("selected");
-      selectedClassroom = null;
-    }
-    return;
-  }
-
-  // misma aula: no hagas nada
-  if (classroom === selectedClassroom) return;
-
-  // quitar selección anterior
-  if (selectedClassroom) selectedClassroom.classList.remove("selected");
-
-  // seleccionar nueva
-  classroom.classList.add("selected");
-  selectedClassroom = classroom;
-
   console.log("clicked:", classroom.dataset.index);
 });
