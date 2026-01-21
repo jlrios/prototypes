@@ -3,71 +3,99 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/styles.css">
-  <link rel="stylesheet" href="./css/main.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-  <script defer src="./js/main.js"></script>
-
+  <link rel="stylesheet" href="./css/app.css">
+  <link rel="stylesheet" href="./css/sidebar.css">
+  <link rel="stylesheet" href="./css/components.css">
+  <link rel="stylesheet" href="./css/map.css">
+  <script defer src="./js/sidebar.js"></script>
+  <script defer src="./js/sector-h.js"></script>
   <title>Plantel 20 - Campus Interactivo</title>
 </head>
 <body>
-  <main>
-    <aside>
-      <nav>
-        <ul class="logo">
-          <li>
-            <i class="fa-solid fa-bars"></i>
-            <label for="">Plantel 20</label>
-          </li>
-        </ul>
-        <ul class="main">
-          <li class="active">
-            <i class="fa-solid fa-home"></i>
-            <label for="">Inicio</label>
-          </li>
-          <li>
-            <i class="fa-solid fa-compass"></i>
-            <label for="">Sectores</label>
-          </li>
-          <li>
-            <i class="fa-solid fa-gear"></i>
-            <label for="">Configuración</label>
-          </li>
-          <li>
-            <i class="fa-solid fa-user"></i>
-            <label for="">Perfil</label>
-          </li>
-          <li>
-            <i class="fa-solid fa-book"></i>
-            <label for="">Ayuda</label>
-          </li>
-          <li>
-            <i class="fa-solid fa-info-circle"></i>
-            <label for="">Acerca de</label>
-          </li>
-        </ul>
-      </nav>
-      <div class="bottom">
-        <ul>
-          <li class="mode">
-            <i class="fa-solid fa-moon"></i>
-            <label for="">Apariencia</label>
-          </li>
-          <li>
-            <i class="fa-solid fa-sign-out-alt"></i>
-            <label for="">Cerrar sesión</label>
-          </li>
-        </ul>
+  <div class="app">
+    <div class="container">
+      <div class="wrap">
+        <aside class="sidebar">
+          <nav>
+            <ul class="logo">
+              <li>
+                <i class="fa-solid fa-bars"></i>
+                <label for="">Plantel 20</label>
+              </li>
+            </ul>
+            <ul class="main">
+              <li class="active">
+                <i class="fa-solid fa-gear"></i>
+                <label for="">Configuración</label>
+              </li>
+              <li>
+                <i class="fa-solid fa-user"></i>
+                <label for="">Perfil</label>
+              </li>
+              <li>
+                <i class="fa-solid fa-book"></i>
+                <label for="">Ayuda</label>
+              </li>
+              <li>
+                <i class="fa-solid fa-info-circle"></i>
+                <label for="">Acerca de</label>
+              </li>
+            </ul>
+          </nav>
+          <div class="bottom">
+            <ul>
+              <li class="mode">
+                <i class="fa-solid fa-moon"></i>
+                <label for="">Apariencia</label>
+              </li>
+              <li>
+                <i class="fa-solid fa-sign-out-alt"></i>
+                <label for="">Cerrar sesión</label>
+              </li>
+            </ul>
+          </div>
+        </aside>
+        <main>
+          <div class="map">
+            <div class="top-bar">
+              <div class="input-search">
+                <input 
+                  type="text" 
+                  placeholder="Buscar aula, docente, alumno..."
+                  spellcheck="false"
+                  autocomplete="off"
+                >
+                <button>
+                  <i class="fa-solid fa-magnifying-glass fa-2x"></i>
+                </button>
+              </div>
+            </div>
+            <div class="content">
+              <section>
+                <div id="buildingHF1" class="floor active"></div>
+                <div id="buildingHF2" class="floor"></div>
+                <div class="toolbar">
+                  <div class="center-title">
+                    <h2>SECTOR H > EDIFICIO H</h2>
+                  </div>
+                  <div class="toolbar-actions">
+                    <button id="btnHF1">
+                      <i class="fa-solid fa-angle-down fa-lg"></i>
+                      Planta 1
+                    </button>
+                    <button id="btnHF2">
+                      <i class="fa-solid fa-angle-up fa-lg"></i>
+                      Planta 2
+                    </button>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </main>
       </div>
-    </aside>
-  </main>
-  <div class="mapWrap">
-    <div id="buildingHF1" class="floor active"></div>
-    <div id="buildingHF2" class="floor"></div>  
-  </div>
-  <div class="toolbar">
-    <button id="btnHF1">Planta baja</button>
-    <button id="btnHF2">Planta alta </button>
-  </div>
+    </div>
+  </div> 
 </body>
 </html>

@@ -1,5 +1,4 @@
 :root {
-  --bg-color: #a9e89b;
   --accent: #00ff7f;
   --tab-active-text: var(--accent);
   --tab-bg: #ffffff;
@@ -16,14 +15,6 @@
   --tab-hover: #00ff7f;
   --text: #ffffff;
   --text-hover: var(--accent);
-}
-
-main {
-  background-color: var(--bg-color);
-}
-
-.dark main {
-  background-color: #070707;
 }
 
 aside {

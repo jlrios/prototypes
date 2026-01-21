@@ -28,8 +28,8 @@ async function loadSvgInto(el, url) {
 btnHF1.addEventListener("click", () => showFloor(1));
 btnHF2.addEventListener("click", () => showFloor(2));
 
-document.querySelector(".wrap").addEventListener("click", (e) => {
+/*document.querySelector(".wrap").addEventListener("click", (e) => {
   const classroom = e.target.closest(".classroom");
   if (!classroom) return;
   console.log("clicked:", classroom.dataset.index);
-});
+});*/
