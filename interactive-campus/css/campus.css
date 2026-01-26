@@ -1,0 +1,55 @@
+.sector {
+  fill-opacity: 1;
+  stroke: transparent;
+  stroke-width: 2;
+  transition: fill-opacity 120ms ease, stroke 120ms ease, stroke-width 120ms ease;
+}
+
+.sector-c1:hover, .sector-c2:hover {
+  cursor: zoom-in;
+  stroke: #fad7ac;
+  fill: #fff2cc; 
+  stroke-width: 6px;
+  z-index: 0;
+}
+
+.sector-h:hover {
+  cursor: zoom-in;
+  fill: #dae8fc;
+  stroke: #6c8ebf; 
+  stroke-width: 6px;
+}
+
+.sector-d:hover {
+  cursor: zoom-in;
+  fill: #cdeb8b;
+  stroke: #82b366; 
+  stroke-width: 6px;
+}
+
+.sector-m:hover {
+  cursor: zoom-in;
+  fill: #ffff88;
+  stroke: #e3c800; 
+  stroke-width: 6px;
+}
+
+/*.sector:hover:not(.active) {
+  fill-opacity: 0.75;
+  stroke: rgba(0,0,0,0.25);
+}
+
+.sector.active {
+  fill-opacity: 0.65;
+  stroke: rgba(0,0,0,0.45);
+  stroke-width: 3;
+}
+
+/* colores base */
+/*.sector-c1 { fill: #f2994a; }
+.sector-h  { fill: #4f83cc; }
+.sector-d  { fill: #9b7ede; }
+.sector-m  { fill: #f2c94c; }
+.sector-c2 { fill: #6b7280; }*/
+
+

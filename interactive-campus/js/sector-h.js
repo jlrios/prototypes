@@ -5,11 +5,12 @@ const floorHF1 = document.getElementById("buildingHF1");
 const floorHF2 = document.getElementById("buildingHF2");
 
 function showFloor(n) {
-    const isF1 = n === 1;
-    floorHF1.classList.toggle("active", isF1);
-    floorHF2.classList.toggle("active", !isF1);
-    btnHF1.classList.toggle("active", isF1);
-    btnHF2.classList.toggle("active", !isF1);
+    const isFl = n === 1;
+    console.log("isFl: " + n);
+    floorHF1.classList.toggle("active", isFl);
+    floorHF2.classList.toggle("active", !isFl);
+    btnHF1.classList.toggle("active", isFl);
+    btnHF2.classList.toggle("active", !isFl);
 }
 
 async function loadSvgInto(el, url) {

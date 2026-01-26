@@ -8,8 +8,10 @@
   <link rel="stylesheet" href="./css/sidebar.css">
   <link rel="stylesheet" href="./css/components.css">
   <link rel="stylesheet" href="./css/map.css">
+  <link rel="stylesheet" href="./css/campus.css">
   <script defer src="./js/sidebar.js"></script>
-  <script defer src="./js/sector-h.js"></script>
+  <!-- <script defer src="./js/sector-h.js"></script> //-->
+  <script defer src="./js/campus.js"></script>
   <title>Plantel 20 - Campus Interactivo</title>
 </head>
 <body>
@@ -21,11 +23,15 @@
             <ul class="logo">
               <li>
                 <i class="fa-solid fa-bars"></i>
-                <label for="">Plantel 20</label>
+                <label for="">Campus 20</label>
               </li>
             </ul>
             <ul class="main">
               <li class="active">
+                <i class="fa-solid fa-home"></i>
+                <label for="">Inicio</label>
+              </li>
+              <li>
                 <i class="fa-solid fa-gear"></i>
                 <label for="">Configuración</label>
               </li>
@@ -72,23 +78,28 @@
               </div>
             </div>
             <div class="content">
-              <section>
-                <div id="buildingHF1" class="floor active"></div>
-                <div id="buildingHF2" class="floor"></div>
+              <section class="map-section">
+                <div class="map-area">
+                  <div id="buildingHF1" class="floor active"></div>
+                  <!-- <div id="buildingHF2" class="floor"></div> -->
+                  <div id="campus20" class="floor"></div>
+                </div>
                 <div class="toolbar">
                   <div class="center-title">
-                    <h2>SECTOR H > EDIFICIO H</h2>
+                    <!-- <h2>SECTOR H > EDIFICIO H</h2> //-->
+                    <h2>CAMPUS 20 ORIENTE</h2>
                   </div>
+                  <!--
                   <div class="toolbar-actions">
                     <button id="btnHF1">
-                      <i class="fa-solid fa-angle-down fa-lg"></i>
                       Planta 1
+                      <i class="fa-solid fa-angle-down fa-lg"></i>
                     </button>
                     <button id="btnHF2">
-                      <i class="fa-solid fa-angle-up fa-lg"></i>
                       Planta 2
+                      <i class="fa-solid fa-angle-up fa-lg"></i>
                     </button>
-                  </div>
+                  </div> //-->
                 </div>
               </section>
             </div>

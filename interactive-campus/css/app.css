@@ -18,7 +18,7 @@ html, body {
 }
 
 .dark body {
-    background-color: #070707;
+  background-color: #070707;
 }
 .app {
   height: 100vh;
@@ -41,9 +41,7 @@ html, body {
   position: relative;
   top: 0;
   left: 0;
-  /*width: 260px; */             
   z-index: 20;
-  /*overflow: hidden;*/
 }
 
 .map {
@@ -55,8 +53,8 @@ html, body {
 
 .bottom-bar {
   margin-top: auto;    
-  /*width: 100%;*/
 }
+
 .top-bar {
   display: flex;
   justify-content: center;

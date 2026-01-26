@@ -2,7 +2,7 @@
   display: flex;
   position: relative;
   width: 45%;
-  margin-top: 15px;
+  padding-top: 15px;
 }
 
 .input-search input {
@@ -11,10 +11,11 @@
   border-radius: 30px;
   color: #555;
   flex: 1;
-  font-size: 18px;
+  font-size: 16px;
   margin-right: 16px;
   outline: none;
   padding: 10px 25px;
+  height: 45px;
 }
 
 .input-search button {
@@ -22,7 +23,5 @@
   border: none;
   border-radius: 50%;
   cursor: pointer;
-  height: 60px;
   outline: none;
-  width: 60px;
 }
