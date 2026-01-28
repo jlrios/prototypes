@@ -9,7 +9,7 @@
   cursor: zoom-in;
   stroke: #fad7ac;
   fill: #fff2cc; 
-  stroke-width: 6px;
+  stroke-width: 3px;
   z-index: 0;
 }
 
@@ -17,21 +17,21 @@
   cursor: zoom-in;
   fill: #dae8fc;
   stroke: #6c8ebf; 
-  stroke-width: 6px;
+  stroke-width: 3px;
 }
 
 .sector-d:hover {
   cursor: zoom-in;
   fill: #cdeb8b;
   stroke: #82b366; 
-  stroke-width: 6px;
+  stroke-width: 3px;
 }
 
 .sector-m:hover {
   cursor: zoom-in;
   fill: #ffff88;
   stroke: #e3c800; 
-  stroke-width: 6px;
+  stroke-width: 3px;
 }
 
 /*.sector:hover:not(.active) {
@@ -52,4 +52,114 @@
 .sector-m  { fill: #f2c94c; }
 .sector-c2 { fill: #6b7280; }*/
 
+.tooltip {
+  position: absolute;
+  /*width: 180px;*/
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.15);
+  pointer-events: none; /* 🔑 no roba el hover */
+  z-index: 1000;
+  transition: opacity 120ms ease;
+}
+
+.tooltip.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.tooltip img {
+  width: 100%;
+  border-radius: 4px;
+  margin-bottom: 4px;
+}
+
+.tooltip .info {
+  font-size: 12px;
+  line-height: 1.3;
+}
+
+.select-menu {
+  width: 260px;
+  position: relative;
+}
+
+.select-menu .select-btn {
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  display: flex;
+  height: 50px;
+  background-color: #fff;
+  padding: 5px 10px 5px 10px;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 8px;
+  align-items: center;
+  cursor: pointer;
+  /*justify-content: space-between;*/
+  justify-self: flex-end;
+}
+
+.select-btn i {
+  transition: 0.3s;
+}
+
+.select-menu.active .select-btn i {
+  transform: rotate(-180deg);
+}
+
+/*.select-menu .options {
+  position: relative;
+  padding: 20px;
+  margin-top: 10px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 0 3px rgba(0,0,0,0.1);
+  display: none;
+}*/
+
+.select-menu .options {
+  position: absolute;
+  left: 0;
+  right: 0;
+
+  bottom: calc(100% + 8px); /* abre hacia arriba */
+  padding: 12px;
+  border-radius: 8px;
+
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+
+  display: none;
+  z-index: 1000; /* por encima del mapa */
+}
+
+
+.select-menu.active .options {
+  display: block;
+}
+
+.options .option {
+  display: flex;
+  height: 55px;
+  cursor: pointer;
+  padding: 0 10px;
+  border-radius: 8px;
+  align-items: center;
+  background: #fff;
+}
+
+.option i {
+  margin-right: 10px;
+}
+
+.options .option:hover {
+  background-color: #f2f2f2;
+}
+
+.option .option-text {
+  font-size: 16px;
+  color: #333
+}
 

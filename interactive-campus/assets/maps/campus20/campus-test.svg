@@ -25,8 +25,8 @@
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
      inkscape:zoom="0.48824715"
-     inkscape:cx="1235.0303"
-     inkscape:cy="744.49999"
+     inkscape:cx="1234.0062"
+     inkscape:cy="908.35144"
      inkscape:window-width="1920"
      inkscape:window-height="944"
      inkscape:window-x="1470"
@@ -45,7 +45,8 @@
          id="g265">
         <g
            data-cell-id="l91YccjSKnoyFnFLPNB--19"
-           id="g36">
+           id="g36"
+           transform="matrix(0.99332127,0,0,0.99109503,15.972176,0.20036182)">
           <g
              transform="translate(0.5,0.5)"
              id="g35">
@@ -63,7 +64,8 @@
         </g>
         <g
            data-cell-id="l91YccjSKnoyFnFLPNB--17"
-           id="g2">
+           id="g2"
+           transform="matrix(0.91807428,0,0,1,22.242833,0)">
           <g
              transform="translate(0.5,0.5)"
              id="g1">
@@ -351,13 +353,14 @@
         </g>
         <g
            data-cell-id="l91YccjSKnoyFnFLPNB--18"
-           id="g34">
+           id="g34"
+           transform="matrix(0.74175588,0,0,0.57652115,562.29096,391.76728)">
           <g
              transform="translate(0.5,0.5)"
              id="g33">
             <rect
                x="2161"
-               y="755.34"
+               y="755.34003"
                width="230"
                height="246.66"
                fill="none"
@@ -1733,7 +1736,8 @@
         </g>
         <g
            data-cell-id="l91YccjSKnoyFnFLPNB--26"
-           id="g186">
+           id="g186"
+           transform="translate(30)">
           <g
              transform="translate(0.5,0.5)"
              id="g183">
@@ -1782,7 +1786,8 @@
         </g>
         <g
            data-cell-id="l91YccjSKnoyFnFLPNB--27"
-           id="g190">
+           id="g190"
+           transform="translate(30)">
           <g
              transform="translate(0.5,0.5)"
              id="g187">
@@ -1813,7 +1818,7 @@
                     <xhtml:div
                        style="box-sizing: border-box; font-size: 0; text-align: left; color: #000000; ">
                       <xhtml:div
-                         style="display: inline-block; font-size: 30px; font-family: Helvetica; color: light-dark(#000000, #ffffff); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">Deslice el cursor por el área de su interés para seleccionarla y obtener más información.</xhtml:div>
+                         style="display: inline-block; font-size: 30px; font-family: Helvetica; color: light-dark(#000000, #ffffff); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">Deslice el cursor por el área de su interés para seleccionarla.</xhtml:div>
                     </xhtml:div>
                   </xhtml:div>
                 </foreignObject>
@@ -1823,14 +1828,15 @@
                    fill="light-dark(#000000, #ffffff)"
                    font-family="Helvetica"
                    font-size="30px"
-                   id="text187">Pase el cursor por el área de su interés para...</text>
+                   id="text187">Deslice el cursor por el área de su interés para...</text>
               </switch>
             </g>
           </g>
         </g>
         <g
            data-cell-id="l91YccjSKnoyFnFLPNB--28"
-           id="g194">
+           id="g194"
+           transform="translate(30)">
           <g
              transform="translate(0.5,0.5)"
              id="g191">

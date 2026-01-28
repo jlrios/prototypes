@@ -13,6 +13,9 @@ async function loadSvgInto(el, url) {
     const res = await fetch(url);
     if (!res.ok) throw new Error(`Failed to load ${url}`);
     el.innerHTML = await res.text();
+  const svg = document.querySelector("svg");
+
+    initSVG(svg);
 }
 
 (async function init() {
@@ -29,39 +32,40 @@ async function loadSvgInto(el, url) {
   if (!classroom) return;
   console.log("clicked:", classroom.dataset.index);
 });*/
+function initSVG(svg) {
+const tooltip = document.getElementById("tooltip");
 
-/*const sectors = document.querySelectorAll(".sector");
+  console.log("svg -> " + svg);
 
-let lockedSector = null; // sector fijado por click
+  function showTooltip(sector) {
+    const rect = sector.getBoundingClientRect();
 
-sectors.forEach(sector => {
-  sector.addEventListener("click", (e) => {
-    e.stopPropagation();
+    console.log(rect);
 
-    console.log("Enter...");
-    // Caso 1: click sobre el mismo sector → limpiar
-    if (lockedSector === sector) {
-      sector.classList.remove("active");
-      lockedSector = null;
-      return;
-    }
+    // Posición fija (arriba del sector)
+    const tooltipX = rect.left + rect.width / 2;
+    const tooltipY = rect.top - 10;
 
-    // Caso 2: click sobre otro sector → cambiar selección
-    if (lockedSector) {
-      lockedSector.classList.remove("active");
-    }
+    tooltip.style.left = `${tooltipX}px`;
+    tooltip.style.top = `${tooltipY}px`;
+    tooltip.style.transform = "translate(-50%, -100%)";
 
-    sector.classList.add("active");
-    lockedSector = sector;
+    tooltip.classList.remove("hidden");
+  }
 
-    console.log("Sector fijo:", sector.dataset.sector);
+  function hideTooltip() {
+    tooltip.classList.add("hidden");
+  }
+
+  svg.addEventListener("mouseover", (e) => {
+    const sector = e.target.closest(".sector");
+    if (!sector) return;
+    showTooltip(sector);
   });
-});
 
-// Click fuera de cualquier sector → limpiar selección
-document.addEventListener("click", () => {
-  if (!lockedSector) return;
-
-  lockedSector.classList.remove("active");
-  lockedSector = null;
-});*/
+  svg.addEventListener("mouseout", (e) => {
+    const sector = e.target.closest(".sector");
+    if (!sector) return;
+    hideTooltip();
+  });
+}  
